@@ -3,7 +3,7 @@ import { defineConfig } from "orval"
 export default defineConfig({
   album_shuffle: {
     input: {
-      target: "./album_shuffle_openapi.json",
+      target: "./album_shuffle-openapi.json",
     },
     output: {
       client: "react-query",
