@@ -27,3 +27,6 @@ dist-ssr
 album_shuffle-openapi.json
 src/models/*
 src/queries/*
+
+# Env variables
+.env
