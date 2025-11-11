@@ -7,17 +7,23 @@ type Props = {
 }
 export function AlbumCard({ album }: Props) {
   const [albumImageLoaded, setAlbumImageLoaded] = useState(false)
-
-  const { image_url: imageUrl, name, artist, spotify_url: spotifyUrl } = album
   const albumImageDimensions = {
     width: 300,
     height: 300,
   }
+
+  const {
+    image_url: imageUrl,
+    name,
+    artist,
+    album_url: albumUrl,
+    artist_url: artistUrl,
+  } = album
   return (
     <div className="flex flex-col items-center p-4">
       <div style={albumImageDimensions} className="bg-red-300" />
       <a
-        href={spotifyUrl}
+        href={albumUrl}
         style={{
           position: "absolute",
         }}
@@ -30,11 +36,14 @@ export function AlbumCard({ album }: Props) {
           }}
           onLoad={() => setAlbumImageLoaded(true)}
           loading="lazy"
-          className="w-full"
         />
       </a>
-      <h1 className="w-full text-center text-2xl truncate font-bold">{name}</h1>
-      <p className="w-full text-center text-base truncate">{artist}</p>
+      <a href={albumUrl} className="w-full">
+        <h1 className="text-center text-2xl truncate font-bold">{name}</h1>
+      </a>
+      <a href={artistUrl} className="w-full">
+        <p className="text-center text-base truncate">{artist}</p>
+      </a>
     </div>
   )
 }

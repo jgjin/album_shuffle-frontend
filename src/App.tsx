@@ -1,8 +1,8 @@
 import { AlbumCard } from "./components/AlbumCard"
-import { useListAlbumListGet } from "./queries/album_shuffle"
+import { useListAlbumsAlbumListGet as useListAlbums } from "./queries/album_shuffle"
 
 export function App() {
-  const { data, error } = useListAlbumListGet({
+  const { data, error } = useListAlbums({
     query: {
       staleTime: Infinity,
     },
