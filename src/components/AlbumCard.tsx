@@ -38,9 +38,9 @@ export function AlbumCard({ album }: Props) {
           loading="lazy"
         />
       </a>
-      <h1 className="w-full text-center text-2xl truncate font-bold">{name}</h1>
+      <h1 className="w-full text-center text-2xl truncate font-bold text-gray-900 dark:text-gray-100">{name}</h1>
       <a href={artistUrl} className="w-full">
-        <p className="text-center text-base truncate">{artist}</p>
+        <p className="text-center text-base truncate text-gray-900 dark:text-gray-100">{artist}</p>
       </a>
     </div>
   )

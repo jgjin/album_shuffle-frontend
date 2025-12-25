@@ -13,9 +13,9 @@ export function App() {
   }
 
   return (
-    <div className="grid w-screen h-screen grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-8 min-h-screen bg-white dark:bg-gray-800">
       {data?.data.albums.map((album) => (
-        <AlbumCard album={album} />
+        <AlbumCard album={album} key={album.album_url} />
       ))}
     </div>
   )
